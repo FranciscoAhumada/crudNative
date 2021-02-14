@@ -34,6 +34,9 @@ const theme = {
 const App = () => {
   return (
     <>
+    <PaperProvider
+      theme={theme}
+    >
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName='Inicio'
@@ -57,23 +60,24 @@ const App = () => {
                                 route = {route}
                               />
             })}
-          />
-          <Stack.Screen
-            name = 'NuevoCliente'
-            component = {NuevoCliente}
-            options={{
-              title : 'Nuevo Cliente'
-            }}
-          />
-          <Stack.Screen
-            name = 'DetalleCliente'
-            component = {DetalleCliente}
-            options={{
-              title : 'Detalle Cliente'
-            }}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
+            />
+            <Stack.Screen
+              name = 'NuevoCliente'
+              component = {NuevoCliente}
+              options={{
+                title : 'Nuevo Cliente'
+              }}
+            />
+            <Stack.Screen
+              name = 'DetalleCliente'
+              component = {DetalleCliente}
+              options={{
+                title : 'Detalle Cliente'
+              }}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+        </PaperProvider>
     </>
   );
 };
