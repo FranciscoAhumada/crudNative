@@ -55,10 +55,10 @@ const App = () => {
             component = {Inicio}
             options={({navigation, route})=> ({
               headerTitleAlign : 'center',
-              headerLeft:(props)=> <Barra {...props}
-                                navigation = {navigation}
-                                route = {route}
-                              />
+              //headerLeft:(props)=> <Barra {...props}
+              //                  navigation = {navigation}
+              //                  route = {route}
+              //                />
             })}
             />
             <Stack.Screen
